@@ -1,27 +1,119 @@
-.example {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-    'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.5;
-  background-color: #fff;
-  color: #424242;
-  max-width: 960px;
-  padding: 16px;
+:root {
+  
 }
 
-.example code {
-  font-family: monospace;
-  font-size: 16px;
-  font-weight: 700;
-  background-color: #009688;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 2px;
+html {
+  box-sizing: border-box;
 }
 
-.example .background {
-  height: 240px;
-  // Путь к изображениям из SASS-файла всегда такой, как из папки css
-  background-image: url('../images/demo.jpg');
-  background-size: cover;
-  background-position: center;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: bold;
+
+  background-color: #ffffff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.search-form__input {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 10px 15px;
+  margin-right: 15px;
+  border-color: #000000;
+}
+
+.search-form__btn {
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: inherit;
+  font-size: inherit;
+  height: 50px;
+  min-width: 100px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.photo-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.photo-card {
+  padding: 5px;
+  margin: 15px;
+  width: calc((100% - 120px) / 3);
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+
+.photo-card:nth-child(3n) {
+  margin-right: 0;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats-item {
+  text-align: center;
+  margin: 5;
+}
+
+.material-icons {
+  display: flex;
+  justify-content: center;
 }
